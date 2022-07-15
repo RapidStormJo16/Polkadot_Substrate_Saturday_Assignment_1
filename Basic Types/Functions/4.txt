@@ -1,0 +1,27 @@
+
+fn main() {
+    println!("Success!");
+}
+
+fn get_option(tp: u8) -> Option<i32> {
+    match tp {
+        1 => {
+            // TODO
+        }
+        _ => {
+            // TODO
+        }
+    };
+    
+    // Rather than returning a None, we use a diverging function instead
+    never_return_fn()
+}
+
+// IMPLEMENT this function in THREE ways
+fn never_return_fn() -> ! {
+    unimplemented!("Dont") //1st method
+    //panic!("Dont")          //2nd method
+    // loop {              //3rd method
+    //     std::thread::sleep(std::time::Duration::from_secs(1))
+    // }
+}

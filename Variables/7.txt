@@ -1,0 +1,9 @@
+
+fn main() {
+    let x = 1;                      //@ solutions are: Either you use the variable in a function
+    let x =2;  //1. Shadowing         // such as print function or use shadowing
+    println!("{}",x); // 2. Usage
+                         
+}
+
+// Warning: unused variable: `x`

@@ -1,0 +1,37 @@
+// Solve it in two ways
+// DON'T let `println!` works
+
+1)
+fn main() {
+    never_return();
+
+    // println!("Failed!");
+}
+
+fn never_return() -> ! {
+    // Implement this function, don't modify the fn signatures
+    panic!("Don't")
+}
+
+2)
+// Solve it in two ways
+// DON'T let `println!` works
+fn main() {
+    never_return();
+
+    // println!("Failed!");
+}
+
+use std::thread;
+use std::time;
+
+fn never_return() -> ! {
+    // Implement this function, don't modify the fn signatures
+    loop {
+        println!("Don't");
+        // sleeping for 1 second to avoid exhausting the cpu resoucre
+        thread::sleep(time::Duration::from_secs(1))
+    }
+}
+
+
